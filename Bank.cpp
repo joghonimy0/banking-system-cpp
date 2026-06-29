@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include <iomanip>
 using namespace std;
 
 class BankAccount
@@ -25,7 +26,7 @@ class BankAccount
         else if(AccountNumber<1001){cout << "\nInvalid account number";}////////////////// validation
         else if(accs>0)
         {
-            cout << "Account number : " << to_string(accnum[AccountNumber-1001]) << "\nName : " << accounts[AccountNumber-1001] <<"\nBalance : " << to_string(balance[AccountNumber-1001]);
+            cout << "Account number : " << to_string(accnum[AccountNumber-1001]) << "\nName : " << accounts[AccountNumber-1001] <<"\nBalance : " << fixed << setprecision(2) <<balance[AccountNumber-1001];
 
             if(checkType(AccountNumber) == 1)
             {cout << "\nAccount Type : Savings Account\nInterest rate : 5%" << endl;}
@@ -47,7 +48,7 @@ class BankAccount
         cout << "===============================" << endl;
         for(int c = 0; c < accs; c++)
         {
-            cout << "Account number : " << to_string(accnum[c]) << "\nName : " << accounts[c] <<"\nBalance : " << to_string(balance[c]);
+            cout << "Account number : " << to_string(accnum[c]) << "\nName : " << accounts[c] <<"\nBalance : " << fixed << setprecision(2) << balance[c];
 
             if(checkType(1001+c) == 1)
             {cout << "\nAccount Type : Savings Account\nInterest rate : 5%" << endl;}
