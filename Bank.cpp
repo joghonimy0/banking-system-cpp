@@ -55,6 +55,7 @@ class BankAccount
 
             else if(checkType(1001+c) == 0)
             {cout << "\nAccount Type : Currents Account\nOverdraft Limit : 200$" << endl;}
+            cout << "\n===============================\n";
         }
      }
 
